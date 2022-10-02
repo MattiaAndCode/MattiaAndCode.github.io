@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="snow.css" />
+    <title>Home - Mattia WebSite</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="inner-width">
+        <div class="logo">$$$</div>
+        <button class="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navbar-menu">
+          <a href="#about" class="aboutme">Chi sono</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Snow -->
+    <div id="snow">
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❄
+        </div>
+      </div>
+    </div>
+
+<!-- Home -->
+    <section id="home">
+      <div class="inner-width">
+        <div class="content">
+          <div class="container">
+            <h1>
+              Ciao, Mi chiamo
+              <span
+                class="txt-type"
+                data-wait="3000"
+                data-words='["Mattia"]'
+              ></span>
+            </h1>
+            <div id="fadeup"><p>Benvenuto nel mio primo WebSite</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+        <div class="inner-width">
+          <div class="about-content">
+            <div class="about-text">
+              <h1>Chi sono</h1>
+              <h2>Programmatore</h1>
+              <p> Ciao sono Mattia, sono un ragazzo a cui piace la programmazione in particolare creare siti web in Html e Css infatti sto cercando di perfezionare al meglio questi 2 Linguaggi</p>
+              <p>Linguaggio che sto imparando <i class="fa fa-code"></i> JavaScript <i class="fa fa-code"></i></p>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="footer">
+            Sito fatto da Mattia 🔥
+          </div>
+        </footer>
+
+      <!--Script -->  
+          <script>
+              $(document).ready(function(){
+    $(window).scroll(function(){
+      if(this.scrollY > 20){
+        $(".navbar").addClass("sticky");
+        $(".goTop").fadeIn();
+      }
+      else{
+        $(".navbar").removeClass("sticky");
+        $(".goTop").fadeOut();
+      }
+    });
+    
+    $(".goTop").click(function(){scroll(0,0)});
+    $('.menu-toggler').click(function(){
+      $(this).toggleClass("active");
+      $(".navbar-menu").toggleClass("active");
+
+    });
+
+    var about = document.getElementById("about");
+    about.scrollIntoView();
+  });
+    </script>
+
+    <script src="index.js"></script>
+    <script src="settings.json"></script>
+
+    <button class="goTop fas fa-arrow-up"></button>
+  </body>
+</html>
